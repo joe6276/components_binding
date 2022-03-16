@@ -9,23 +9,29 @@ import { Component, OnInit,EventEmitter, Output } from '@angular/core';
 export class TeacherComponent implements OnInit {
   name:string=''
   email:string=''
-  @Output() addS=new EventEmitter<{studentName:string, studentEmail:string}>()
-  @Output()  addT=new EventEmitter<{studentName:string, studentEmail:string}>()
+  role:string=''
+  @Output() addS=new EventEmitter<{studentName:string, studentEmail:string ,role:string}>()
+  // @Output()  addT=new EventEmitter<{studentName:string, studentEmail:string,role:string}>()
 
 
-  addStudent(){
-    this.addS.emit({
-      studentName:this.name,studentEmail:this.email
-    })
+  // addStudent(){
+  //   this.addS.emit({
+  //     studentName:this.name,studentEmail:this.email, role:this.role
+  //   })
 
-  }
+  // }
   addTeacher(){
-    this.addT.emit({
-      studentName:this.name,studentEmail:this.email
+    this.addS.emit({
+      studentName:this.name,studentEmail:this.email, role:this.role
+   
     })
-  }
-  constructor() { }
 
+    console.log(this.name,this.email,this.role)
+  }
+  constructor() {
+  
+   }
+   
   ngOnInit(): void {
   }
 
