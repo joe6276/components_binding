@@ -9,7 +9,9 @@ import { Scholar } from '../interfaces/scholar.interface';
 export class StudentComponent implements OnInit {
 @Input() ascholar? :Scholar;
 
-  constructor() { }
+  constructor() {
+    console.log(this.ascholar)
+   }
 
   ngOnInit(): void {
   }

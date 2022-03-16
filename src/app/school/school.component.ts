@@ -10,18 +10,18 @@ import { Scholar } from '../interfaces/scholar.interface';
 export class SchoolComponent implements OnInit {
   scholars:Scholar[]=[]
 
-  addTeachers(teacherEvent:{studentName:string, studentEmail:string}){
+  // addTeachers(teacherEvent:{studentName:string, studentEmail:string}){
 
-    this.scholars.push({
-      role:'Teacher',
-      name:teacherEvent.studentName,
-      email:teacherEvent.studentEmail
-    })
+  //   this.scholars.push({
+  //     role:'Teacher',
+  //     name:teacherEvent.studentName,
+  //     email:teacherEvent.studentEmail
+  //   })
 
-  }
-  addStudents(studentEvent:{studentName:string, studentEmail:string}){
+  // }
+  addStudents(studentEvent:{studentName:string, studentEmail:string,role:string}){
     this.scholars.push({
-      role:'Student',
+      role:studentEvent.role,
       name:studentEvent.studentName,
       email:studentEvent.studentEmail
     })
