@@ -1,0 +1,8 @@
+<app-teacher 
+(addS)="addStudents($event)"
+(addT)="addTeachers($event)"
+></app-teacher>
+<app-student *ngFor="let scholar of scholars"
+[ascholar]="scholar"
+
+></app-student>

@@ -1,0 +1,23 @@
+<br>
+<div class="container">
+    <div class="row" >
+    <div class="col-xs-8">
+        <div  *ngIf="ascholar" class="panel panel-default">
+            <div *ngIf="ascholar.role==='Teacher'" class="panel-heading">
+               The Teacher is {{ascholar.name}}
+            </div>
+
+            <div *ngIf="ascholar.role==='Student'" class="panel-heading">
+                The Student is {{ascholar.name}}
+            </div>
+            <div class="panel-body">
+            <p *ngIf="ascholar.role==='Teacher'" style="color:red;">{{ascholar.email}}</p>
+            
+            <em *ngIf="ascholar.role==='Student'" style="color: blue;">{{ascholar.email}}</em>
+        </div>    
+        </div> 
+    </div>
+   </div>
+ 
+</div>
+ 
